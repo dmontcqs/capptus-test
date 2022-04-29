@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>TravelHub</title>
+   <!-- CDN BOOTSTRAP -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+   <link rel="shortcut icon" href="./assets/faviconTravel.png" type="image/x-icon" />
+  
+</head>
+ 
+<body>
+   <!-- COMIENZA header -->
+   <div class="container">
+       <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+           <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+               <img src="assets/ag_logo.png" class="bi me-2" width="40" height="40" />
+               <span class="fs-4">TravelHub</span>
+           </a>
+       </header>
+   </div>
+   <!-- TERMINA header -->
+ 
+ 
+   <!-- COMIENZA main -->
+   <main>
+       <!-- COMIENZA carousel BOOTSTRAP -->
+       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+           <div class="carousel-indicators">
+               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                   aria-current="true" aria-label="Slide 1"></button>
+               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                   aria-label="Slide 2"></button>
+               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                   aria-label="Slide 3"></button>
+           </div>
+           <div class="carousel-inner carousel-container">
+              
+              
+              
+               <div class="active carousel-item car-item">
+                   <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                       class="d-block w-100 bs-img" alt="gente sonriendo" />
+                   <div class="carousel-caption d-md-block">
+                       <h2>El mundo te espera</h2>
+                   </div>
+               </div>
+ 
+               <div class="carousel-item car-item">
+                   <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                       class="d-block w-100 bs-img " alt="hombre en aeropuerto" />
+                   <div class="carousel-caption d-md-block">
+                       <h2>Escapa de la rutina</h2>
+                   </div>
+               </div>
+               <div class="carousel-item car-item">
+                   <img src="https://images.unsplash.com/photo-1636103714219-06f44f445b08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                       class="d-block w-100 bs-img" alt="surfista en playa" />
+                   <div class="carousel-caption  d-md-block">
+                       <h2>Vive experiencias inolvidables</h2>
+                   </div>
+               </div>
+              
+              
+           </div>
+           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+               data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+           </button>
+           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+               data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+           </button>
+       </div>
+       <!-- Termina CARROUSEL DE BS -->
+ 
+       <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+           <!-- CONTAINER con descripción y formulario -->
+           <div class="row align-items-center g-lg-5 py-5">
+               <!-- COMIENZA descripcion -->
+               <div class="mb-5 col-lg-7 text-center text-lg-start ag-description">
+                   <h1 class="display-4 fw-bold lh-1 mb-3">Viaja con nosotros</h1>
+                   <p class="col-lg-10 fs-4">
+                       "Whereas trees have roots, men have legs with which to they could
+                       leave and go elsewhere.” <br />
+                       -George Steiner
+                   </p>
+               </div>
+               <!-- TERMINA descripcion -->
+               <!-- COMIENZA formulario -->
+               <div class="col-md-10 mx-auto col-lg-5 ag-form-container">
+                   <h3 class="display-6 fw-bold lh-1 mb-3">Escríbenos</h3>
+                   <form id="ag-form" class="p-4 p-md-5 border rounded-3 bg-light needs-validation"
+                       onsubmit="return valida(this)">
+                       <!-- primer imput: Nombre -->
+                       <div class="mb-3">
+                           <label for="Nombre" class="form-label">
+                               Nombre
+                           </label>
+                           <input type="text" class="form-control" id="Nombre" pattern="[A-Za-z]+" />
+                       </div>
+                       <!-- 2do imput: Apellido -->
+                       <div class="mb-3">
+                           <label for="Apellido" class="form-label">
+                               Apellido Paterno
+                           </label>
+                           </label>
+                           <input type="text" class="form-control" id="Apellido" pattern="[A-Za-z]+" />
+                       </div>
+                       <!-- 3er imput: Apellido2 -->
+                       <div class="mb-3">
+                           <label for="ApellidoMaterno" class="form-label">
+                               Apellido Materno
+                           </label>
+                           </label>
+                           <input type="text" class="form-control" id="ApellidoMaterno" pattern="[A-Za-z]+" />
+                       </div>
+                       <!-- 4to imput: Email -->
+                       <div class="mb-3">
+                           <label for="Email" class="form-label">
+                               Correo electrónico
+                           </label>
+                           <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"
+                               placeholder="email@yourpage.com" />
+                           <div id="emailHelp" class="form-text">
+                               No compartiremos tu información.
+                           </div>
+                       </div>
+                       <!-- 5to imput: Teléfono -->
+                       <div class="mb-3">
+                           <label for="Numero" class="form-label">
+                               Número telefónico (10 dígitos)
+                           </label>
+                           <input type="tel" class="form-control" id="Numero" maxlength="10" minlength="10" pattern="[0-9]{10}"
+                               placeholder="1245697890" />
+                       </div>
+                       <!-- 6to imput: Textarea -->
+                       <div class="mb-3">
+                           <label for="Textarea">Escribe tu mensaje:  </label>
+                           <textarea class="form-control" id="Textarea" rows="3"></textarea>
+                       </div>
+                       <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                   </form>
+               </div>
+               <!-- TERMINA formulario -->
+           </div>
+           <!-- termina CONTAINER con descripción y formulario -->
+       </div>
+   </main>
+   <!-- TERMINA main -->
+ 
+ 
+   <!-- COMIENZA footer -->
+   <div class="container">
+       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+           <!-- LOGO y Copyright -->
+           <div class="col-md-4 d-flex align-items-center">
+               <img src="assets/ag_logo.png" class="bi me-2 mb-md-0" width="30" height="30" />
+ 
+               <span class="text-muted">© 2021 TravelHub</span>
+           </div>
+           <!-- lista de íconos de redes -->
+           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+               <li class="ms-3">
+                   <a class="text-muted" href="#"><img
+                           src="https://cdn.icon-icons.com/icons2/2428/PNG/512/linkedin_black_logo_icon_147114.png"
+                           alt="linkedinLogo" class="bi" width="24" height="24" /></a>
+               </li>
+               <li class="ms-3">
+                   <a class="text-muted" href="#"><img src="https://pngimg.com/uploads/twitter/twitter_PNG1.png"
+                           alt="twitterLogo" class="bi" width="24" height="24" /></a>
+               </li>
+               <li class="ms-3">
+                   <a class="text-muted" href="#"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                           alt="gitHubLogo" class="bi" width="24" height="24" /></a>
+               </li>
+           </ul>
+           <!-- TERMINA lista de íconos de redes -->
+       </footer>
+   </div>
+   <!-- TERMINA footer  -->
+ 
+   <!-- scripts -->
+   <script src="scripts.js"></script>
+   <!-- BS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+       crossorigin="anonymous"></script>
+</body>
+ 
+</html>
+
+
+
+ 
